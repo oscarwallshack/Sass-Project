@@ -533,6 +533,6 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"4M6V8":[function(require,module,exports) {
 
-},{}]},["lX4BT","4M6V8"], "4M6V8", "parcelRequireb091")
+},{}]},["lX4BT","4M6V8"], "4M6V8", "parcelRequire2d6b")
 
 //# sourceMappingURL=SASS-Project.59712999.js.map

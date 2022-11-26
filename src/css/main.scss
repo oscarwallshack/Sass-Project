@@ -1,4 +1,64 @@
-body{
+$primary-color: #E5D9B6;
+$secondary-color: #A4BE7B;
+$tertiary-color: #5F8D4E;
+$quaternary-color: #285430;
+
+body {
     margin: 0;
-    background-color: #ddd;
+    background-color: #d1d1d1dd;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: $quaternary-color;
+    color: #fff;
+}
+
+.primary-button {
+    background-color: $primary-color;
+    border-radius: 4px;
+    padding: 6px 16px;
+    border: none;
+    cursor: pointer;
+
+    &_text {
+        font-weight: bold;
+        color: $quaternary-color;
+        text-transform: uppercase;
+    }
+}
+
+.card {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background-color: $primary-color;
+
+
+    &_content {
+        width: 70%;
+        background-color: $secondary-color;
+
+    }
+
+    &_image {
+        height: 100px;
+        width: 100px;
+    }
+
+    &_buttons {
+        background-color: $tertiary-color;
+
+        &_link{
+
+        }
+        &--secondary{
+            
+        }
+    }
 }

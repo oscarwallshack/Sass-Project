@@ -1,6 +1,51 @@
 body {
-  background-color: #ddd;
+  background-color: #d1d1d1dd;
   margin: 0;
+}
+
+footer {
+  color: #fff;
+  background-color: #285430;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+.primary-button {
+  cursor: pointer;
+  background-color: #e5d9b6;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 16px;
+}
+
+.primary-button_text {
+  color: #285430;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.card {
+  width: 100%;
+  text-align: center;
+  background-color: #e5d9b6;
+  place-items: center;
+  display: grid;
+}
+
+.card_content {
+  width: 70%;
+  background-color: #a4be7b;
+}
+
+.card_image {
+  height: 100px;
+  width: 100px;
+}
+
+.card_buttons {
+  background-color: #5f8d4e;
 }
 
 /*# sourceMappingURL=index.8c1c22dc.css.map */
