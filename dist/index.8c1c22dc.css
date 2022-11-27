@@ -11,7 +11,7 @@ body {
 
 .card .header {
   z-index: 2;
-  height: 130px;
+  height: 120px;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   background: #2b2b2b3d;
@@ -36,33 +36,71 @@ body {
 }
 
 .card .card_body {
-  height: 100%;
-  grid-template-columns: 1fr 1fr;
+  height: calc(100% - 120px);
+  grid-template-columns: 1fr 4fr;
   display: grid;
 }
 
 .card .card_body .content {
-  height: 100%;
   z-index: 2;
   color: #251320;
   background-color: #fffff9;
-  grid-template-columns: 1fr 2fr;
-  gap: 20px;
+  grid-template-columns: 1fr 80%;
+  align-items: center;
   display: grid;
 }
 
 .card .card_body .content_headline {
+  font-size: 30px;
   transform: rotate(-90deg);
 }
 
 .card .card_body .content_quote {
-  overflow-wrap: break-word;
+  height: 100px;
   font-size: 20px;
   transform: rotate(-90deg);
 }
 
-.card .card_body .buttons {
-  background-color: #db288e;
+.card .card_body .invitation {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.card .card_body .invitation h2 {
+  color: #f7ea06;
+}
+
+.card .card_body .invitation .buttons button {
+  border: none;
+  border-radius: 4px;
+  margin: 0 10px;
+  padding: 20px;
+}
+
+.card .card_body .invitation .buttons button a {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card .card_body .invitation .buttons .button {
+  color: #251320;
+  background-color: #f7ea06;
+}
+
+.card .card_body .invitation .buttons .button--secondary {
+  background-color: #251320;
+}
+
+.card .card_body .invitation .buttons .button_link {
+  color: #251320;
+}
+
+.card .card_body .invitation .buttons .button_link--secondary {
+  color: #fffff9;
 }
 
 .card .cyberpunk_art {
