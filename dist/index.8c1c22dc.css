@@ -1,12 +1,22 @@
-body {
+@import "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap";
+* {
   margin: 0;
   padding: 0;
+  font-family: Permanent Marker, cursive;
+}
+
+body {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: url("cyberpunk_2.5388ba50.jpg") top / cover no-repeat;
+  bottom: 0;
+  right: 0;
 }
 
 .card {
   height: 100vh;
   text-align: center;
-  position: relative;
 }
 
 .card .header {
@@ -45,13 +55,14 @@ body {
   z-index: 2;
   color: #251320;
   background-color: #fffff9;
-  grid-template-columns: 1fr 80%;
+  grid-template-columns: 20% 80%;
   align-items: center;
   display: grid;
 }
 
 .card .card_body .content_headline {
-  font-size: 30px;
+  padding: 100px 0 0;
+  font-size: 40px;
   transform: rotate(-90deg);
 }
 
@@ -71,6 +82,7 @@ body {
 
 .card .card_body .invitation h2 {
   color: #f7ea06;
+  margin: 10px;
 }
 
 .card .card_body .invitation .buttons button {
@@ -101,16 +113,6 @@ body {
 
 .card .card_body .invitation .buttons .button_link--secondary {
   color: #fffff9;
-}
-
-.card .cyberpunk_art {
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  background: url("cyberpunk_2.5388ba50.jpg") 100% 0 no-repeat fixed;
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 
 /*# sourceMappingURL=index.8c1c22dc.css.map */

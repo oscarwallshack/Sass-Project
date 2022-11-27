@@ -1,18 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+
 $primary-color: #fffff9;
 $secondary-color: #db288e;
 $tertiary-color: #f7ea06;
 $quaternary-color: #251320;
-;
 
-body {
+*{
+    font-family: 'Permanent Marker', cursive;
     margin: 0;
     padding: 0;
+}
+
+body {
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background: url("../images/cyberpunk_2.jpg") no-repeat top center / cover;
 }
 
 
 
 .card {
-    position: relative;
     height: 100vh;
     text-align: center;
 
@@ -51,14 +61,15 @@ body {
         .content {
             z-index: 2;
             display: grid;
-            grid-template-columns: 1fr 80%;
+            grid-template-columns: 20% 80%;
             align-items: center;
             background-color: $primary-color;
             color: #251320;
 
             &_headline {
+                padding: 100px 0 0 0;
                 transform: rotate(-90deg);
-                font-size: 30px;
+                font-size: 40px;
             }
 
             &_quote {
@@ -77,6 +88,7 @@ body {
 
             h2 {
                 color: $tertiary-color;
+                margin: 10px;
             }
 
             .buttons {
@@ -119,16 +131,6 @@ body {
         }
     }
 
-    .cyberpunk_art {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-        height: 100%;
-        width: 100%;
-        background: url("../images/cyberpunk_2.jpg") no-repeat top right fixed;
-
-    }
 
 }
 
