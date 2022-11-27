@@ -1,0 +1,35 @@
+@use './variables'as *;
+
+%btn {
+    border: none;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 0 10px;
+}
+
+%btn_txt {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.button {
+    background-color: $tertiary-color;
+    color: $quaternary-color;
+    @extend %btn;
+
+    &--secondary {
+        background-color: $quaternary-color;
+        @extend %btn;
+    }
+
+    &_link {
+        color: $quaternary-color;
+        @extend %btn_txt;
+
+        &--secondary {
+            color: $primary-color;
+            @extend %btn_txt;
+        }
+    }
+}

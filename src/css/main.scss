@@ -1,11 +1,11 @@
+@use './variables.scss'as *;
+@use './mixins.scss'as *;
+@use './buttons';
+@use './functions'as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
 
-$primary-color: #fffff9;
-$secondary-color: #db288e;
-$tertiary-color: #f7ea06;
-$quaternary-color: #251320;
-
-*{
+* {
     font-family: 'Permanent Marker', cursive;
     margin: 0;
     padding: 0;
@@ -20,25 +20,23 @@ body {
     background: url("../images/cyberpunk_2.jpg") no-repeat top center / cover;
 }
 
-
-
 .card {
     height: 100vh;
     text-align: center;
 
     .header {
         z-index: 2;
-        height: 120px;
+        height: convertPxToRem(120);
         display: grid;
         grid-template-columns: 1fr 5fr;
         align-items: baseline;
         justify-items: left;
-        gap: 200px;
+        gap: convertPxToRem(200);
         background: #2b2b2b3d;
         backdrop-filter: blur(5px);
 
         .logo {
-            height: 100px;
+            height: convertPxToRem(100);
         }
 
         .perks {
@@ -47,14 +45,14 @@ body {
             width: 100%;
 
             .perk {
-                height: 70px;
+                height: convertPxToRem(70);
             }
         }
 
     }
 
     .card_body {
-        height: calc(100% - 120px);
+        height: calc(100% - convertPxToRem(120));
         display: grid;
         grid-template-columns: 1fr 4fr;
 
@@ -67,95 +65,26 @@ body {
             color: #251320;
 
             &_headline {
-                padding: 100px 0 0 0;
+                padding: convertPxToRem(100) 0 0 0;
                 transform: rotate(-90deg);
-                font-size: 40px;
+                font-size: convertPxToRem(40);
             }
 
             &_quote {
-                height: 100px;
-                font-size: 20px;
+                height: convertPxToRem(100);
+                font-size: convertPxToRem(20);
                 transform: rotate(-90deg);
             }
         }
 
         .invitation {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            margin-bottom: 50px;
+            @include setFlex(column, flex-end);
+            margin-bottom: convertPxToRem(50);
 
             h2 {
                 color: $tertiary-color;
-                margin: 10px;
-            }
-
-            .buttons {
-                
-                button {
-                    border: none;
-                    padding: 20px;
-                    border-radius: 4px;
-                    margin: 0 10px;
-
-                    a {
-                        text-decoration: none;
-                        font-size: 18px;
-                        font-weight: bold;
-                    }
-                }
-
-                .button {
-                    background-color: $tertiary-color;
-                    color: $quaternary-color;
-
-                    &--secondary {
-                        background-color: $quaternary-color;
-                    }
-
-                    &_link {
-                        color: $quaternary-color;
-
-                        &--secondary {
-                            color: $primary-color;
-
-                        }
-                    }
-
-
-                }
-
-
+                margin: convertPxToRem(10);
             }
         }
     }
-
-
 }
-
-// footer {
-//     position: absolute;
-//     bottom: 0;
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     gap: 16px;
-//     background-color: $quaternary-color;
-//     color: #fff;
-// }
-
-// .primary-button {
-//     background-color: $primary-color;
-//     border-radius: 4px;
-//     padding: 6px 16px;
-//     border: none;
-//     cursor: pointer;
-
-//     &_text {
-//         font-weight: bold;
-//         color: $quaternary-color;
-//         text-transform: uppercase;
-//     }
-// }
