@@ -1,64 +1,116 @@
-$primary-color: #E5D9B6;
-$secondary-color: #A4BE7B;
-$tertiary-color: #5F8D4E;
-$quaternary-color: #285430;
+$primary-color: #fffff9;
+$secondary-color: #db288e;
+$tertiary-color: #251320;
+$quaternary-color: #665294;
 
 body {
     margin: 0;
-    background-color: #d1d1d1dd;
+    padding: 0;
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    background-color: $quaternary-color;
-    color: #fff;
-}
 
-.primary-button {
-    background-color: $primary-color;
-    border-radius: 4px;
-    padding: 6px 16px;
-    border: none;
-    cursor: pointer;
-
-    &_text {
-        font-weight: bold;
-        color: $quaternary-color;
-        text-transform: uppercase;
-    }
-}
 
 .card {
-    width: 100%;
-    display: grid;
-    justify-items: center;
-    align-items: center;
+    position: relative;
+    height: 100vh;
     text-align: center;
-    background-color: $primary-color;
 
+    .header {
+        z-index: 2;
+        height: 130px;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        align-items: baseline;
+        justify-items: left;
+        gap: 200px;
+        background: #2b2b2b3d;
+        backdrop-filter: blur(5px);
 
-    &_content {
-        width: 70%;
-        background-color: $secondary-color;
-
-    }
-
-    &_image {
-        height: 100px;
-        width: 100px;
-    }
-
-    &_buttons {
-        background-color: $tertiary-color;
-
-        &_link{
-
+        .logo {
+            height: 100px;
         }
-        &--secondary{
-            
+
+        .perks {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+
+            .perk {
+                height: 70px;
+            }
+        }
+
+    }
+
+    .card_body {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .content {
+            height: 100%;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            background-color: $primary-color;
+            color: #251320;
+
+            &_headline {
+                transform: rotate(-90deg);
+
+
+            }
+
+            &_quote {
+                font-size: 20px;
+                transform: rotate(-90deg);
+                overflow-wrap: break-word;
+            }
+        }
+
+        .buttons {
+            background-color: $secondary-color;
+
+            h2 {}
         }
     }
+
+    .cyberpunk_art {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        background: url("../images/cyberpunk_2.jpg") no-repeat top right fixed;
+
+    }
+
 }
+
+// footer {
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 16px;
+//     background-color: $quaternary-color;
+//     color: #fff;
+// }
+
+// .primary-button {
+//     background-color: $primary-color;
+//     border-radius: 4px;
+//     padding: 6px 16px;
+//     border: none;
+//     cursor: pointer;
+
+//     &_text {
+//         font-weight: bold;
+//         color: $quaternary-color;
+//         text-transform: uppercase;
+//     }
+// }
