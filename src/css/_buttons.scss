@@ -1,4 +1,6 @@
 @use './variables'as *;
+@use './_breakpoints'as *;
+
 
 %btn {
     border: none;

@@ -2,6 +2,8 @@
 @use './mixins.scss'as *;
 @use './buttons';
 @use './functions'as *;
+@use './_breakpoints'as *;
+
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
 
@@ -29,7 +31,7 @@ body {
         height: convertPxToRem(120);
         display: grid;
         grid-template-columns: 1fr 5fr;
-        align-items: baseline;
+        align-items: center;
         justify-items: left;
         gap: convertPxToRem(200);
         background: #2b2b2b3d;
@@ -46,9 +48,42 @@ body {
 
             .perk {
                 height: convertPxToRem(70);
+
             }
         }
 
+        @include media('<768px') {
+            height: convertPxToRem(80);
+            gap: convertPxToRem(20);
+
+            .logo {
+                height: convertPxToRem(65);
+            }
+
+            .perks {
+                width: 100%;
+
+                .perk {
+                    height: convertPxToRem(50);
+                }
+            }
+        }
+
+        @include media('<=585px') {
+            .perks {
+                .perk {
+                    height: convertPxToRem(40);
+                }
+            }
+        }
+
+        @include media('<=360px') {
+            .perks {
+                .perk {
+                    height: convertPxToRem(30);
+                }
+            }
+        }
     }
 
     .card_body {
@@ -64,6 +99,7 @@ body {
             background-color: $primary-color;
             color: #251320;
 
+
             &_headline {
                 padding: convertPxToRem(100) 0 0 0;
                 transform: rotate(-90deg);
@@ -71,9 +107,22 @@ body {
             }
 
             &_quote {
+                display: flex;
+                flex-direction: column;
                 height: convertPxToRem(100);
                 font-size: convertPxToRem(20);
                 transform: rotate(-90deg);
+            }
+
+            @include media('<=360px') {
+
+                &_headline {
+                    font-size: convertPxToRem(32);
+                }
+
+                &_quote {
+                    font-size: convertPxToRem(17);
+                }
             }
         }
 
@@ -87,4 +136,6 @@ body {
             }
         }
     }
+
+    @include media('<768px') {}
 }
