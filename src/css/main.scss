@@ -19,10 +19,10 @@ body {
     z-index: -1;
     height: 100%;
     width: 100%;
-    background: url("../images/cyberpunk_2.jpg") no-repeat top center / cover;
+    background: url("../images/cyberpunk_2.webp") no-repeat top center / cover;
 
     @include media('<768px') {
-        background: url("../images/cyberpunk.jpg") no-repeat top center / cover;
+        background: url("../images/cyberpunk.webp") no-repeat top center / cover;
 
     }
 }
@@ -48,7 +48,7 @@ body {
 
         .perks {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             width: 100%;
 
             .perk {
@@ -56,10 +56,11 @@ body {
 
             }
         }
+        // Media for header
 
         @include media('<768px') {
             height: convertPxToRem(80);
-            gap: convertPxToRem(20);
+            gap: convertPxToRem(50);
 
             .logo {
                 height: convertPxToRem(65);
@@ -73,8 +74,6 @@ body {
                 }
             }
         }
-
-        // Media for header
 
         @include media('<=585px') {
             .perks {
