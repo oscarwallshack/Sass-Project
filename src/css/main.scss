@@ -56,6 +56,7 @@ body {
 
             }
         }
+
         // Media for header
 
         @include media('<768px') {
@@ -106,6 +107,7 @@ body {
             color: #251320;
 
             &_headline {
+                justify-self: end;
                 font-size: convertPxToRem(40);
                 writing-mode: vertical-rl;
                 -webkit-transform: rotate(-180deg);
