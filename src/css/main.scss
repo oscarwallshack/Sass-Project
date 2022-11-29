@@ -20,6 +20,11 @@ body {
     height: 100%;
     width: 100%;
     background: url("../images/cyberpunk_2.jpg") no-repeat top center / cover;
+
+    @include media('<768px') {
+        background: url("../images/cyberpunk.jpg") no-repeat top center / cover;
+
+    }
 }
 
 .card {
@@ -69,6 +74,8 @@ body {
             }
         }
 
+        // Media for header
+
         @include media('<=585px') {
             .perks {
                 .perk {
@@ -89,40 +96,28 @@ body {
     .card_body {
         height: calc(100% - convertPxToRem(120));
         display: grid;
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 1fr 5fr;
 
         .content {
             z-index: 2;
             display: grid;
-            grid-template-columns: 20% 80%;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
             background-color: $primary-color;
             color: #251320;
 
-
             &_headline {
-                padding: convertPxToRem(100) 0 0 0;
-                transform: rotate(-90deg);
                 font-size: convertPxToRem(40);
+                writing-mode: vertical-rl;
+                -webkit-transform: rotate(-180deg);
+
             }
 
             &_quote {
-                display: flex;
-                flex-direction: column;
-                height: convertPxToRem(100);
+                height: 80%;
                 font-size: convertPxToRem(20);
-                transform: rotate(-90deg);
-            }
-
-            @include media('<=360px') {
-
-                &_headline {
-                    font-size: convertPxToRem(32);
-                }
-
-                &_quote {
-                    font-size: convertPxToRem(17);
-                }
+                writing-mode: vertical-rl;
+                -webkit-transform: rotate(-180deg);
             }
         }
 
@@ -135,7 +130,34 @@ body {
                 margin: convertPxToRem(10);
             }
         }
+
+        // Media for Card
+
+        @include media('<=768px') {
+            grid-template-columns: 1fr 3fr;
+
+            .content {
+                &_headline {
+                    font-size: convertPxToRem(30);
+                }
+
+                &_quote {
+                    font-size: convertPxToRem(18);
+                }
+            }
+
+            .invitation {
+                .buttons {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                h2 {
+                    font-size: convertPxToRem(20);
+                }
+            }
+
+        }
     }
 
-    @include media('<768px') {}
 }

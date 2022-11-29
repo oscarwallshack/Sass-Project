@@ -6,10 +6,22 @@
   padding: 20px;
 }
 
+@media (max-width: 479px) {
+  .button--secondary, .button {
+    padding: 12px;
+  }
+}
+
 .button_link--secondary, .button_link {
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
+}
+
+@media (max-width: 479px) {
+  .button_link--secondary, .button_link {
+    font-size: 14px;
+  }
 }
 
 .button {
@@ -42,6 +54,12 @@ body {
   background: url("cyberpunk_2.5388ba50.jpg") top / cover no-repeat;
   bottom: 0;
   right: 0;
+}
+
+@media (max-width: 767px) {
+  body {
+    background: url("cyberpunk.e37a8bb2.jpg") top / cover no-repeat;
+  }
 }
 
 .card {
@@ -108,7 +126,7 @@ body {
 
 .card .card_body {
   height: calc(100% - 7.5rem);
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
   display: grid;
 }
 
@@ -116,33 +134,22 @@ body {
   z-index: 2;
   color: #251320;
   background-color: #fffff9;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   display: grid;
 }
 
 .card .card_body .content_headline {
-  padding: 6.25rem 0 0;
+  writing-mode: vertical-rl;
   font-size: 2.5rem;
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-180deg);
 }
 
 .card .card_body .content_quote {
-  height: 6.25rem;
-  flex-direction: column;
+  height: 80%;
+  writing-mode: vertical-rl;
   font-size: 1.25rem;
-  display: flex;
-  transform: rotate(-90deg);
-}
-
-@media (max-width: 360px) {
-  .card .card_body .content_headline {
-    font-size: 2rem;
-  }
-
-  .card .card_body .content_quote {
-    font-size: 1.0625rem;
-  }
+  -webkit-transform: rotate(-180deg);
 }
 
 .card .card_body .invitation {
@@ -156,6 +163,29 @@ body {
 .card .card_body .invitation h2 {
   color: #f7ea06;
   margin: .625rem;
+}
+
+@media (max-width: 768px) {
+  .card .card_body {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .card .card_body .content_headline {
+    font-size: 1.875rem;
+  }
+
+  .card .card_body .content_quote {
+    font-size: 1.125rem;
+  }
+
+  .card .card_body .invitation .buttons {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+  }
+
+  .card .card_body .invitation h2 {
+    font-size: 1.25rem;
+  }
 }
 
 /*# sourceMappingURL=index.8c1c22dc.css.map */

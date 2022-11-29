@@ -7,12 +7,21 @@
     padding: 20px;
     border-radius: 4px;
     margin: 0 10px;
+
+    @include media('<480px') {
+        padding: 12px;
+       
+    }
 }
 
 %btn_txt {
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+
+    @include media('<480px') {
+        font-size: 14px;
+    }
 }
 
 .button {
@@ -34,4 +43,6 @@
             @extend %btn_txt;
         }
     }
+
+
 }
