@@ -76,6 +76,7 @@ body {
   grid-template-columns: 1fr 5fr;
   place-items: center left;
   gap: 12.5rem;
+  padding: 0 20px;
   display: grid;
 }
 
@@ -91,6 +92,7 @@ body {
 
 .card .header .perks .perk {
   height: 4.375rem;
+  filter: drop-shadow(0 0 20px #251320);
 }
 
 @media (max-width: 767px) {

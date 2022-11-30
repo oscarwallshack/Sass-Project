@@ -34,6 +34,7 @@ body {
     .header {
         z-index: 2;
         height: convertPxToRem(120);
+        padding: 0 20px;
         display: grid;
         grid-template-columns: 1fr 5fr;
         align-items: center;
@@ -50,10 +51,9 @@ body {
             display: flex;
             justify-content: space-between;
             width: 100%;
-
             .perk {
                 height: convertPxToRem(70);
-
+                filter: drop-shadow(0 0 20px $quaternary-color);
             }
         }
 
